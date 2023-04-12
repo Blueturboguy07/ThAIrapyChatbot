@@ -10,7 +10,7 @@ function App() {
   const [chatLog, setChatLog] = useState([{
 
     user: "gpt",
-    message:"Welcome to ThAIrapy Chatbot, an AI-powered therapy chatbot. Please feel free to share anything on your mind, and I'll do my best to help you. Feel free to ask me for resources available based on your location, financial status, and commitments. Let's get started!"
+    message: "Welcome to ThAIrapy Chatbot, an AI-powered therapy chatbot. Please feel free to share anything on your mind, and I'll do my best to help you. Feel free to ask me for resources available based on your location, financial status, and commitments. Let's get started!"
   }]);
 
   async function handleSubmit(e) {
@@ -19,25 +19,25 @@ function App() {
     setInput("");
     setChatLog(chatLogNew)
 
-    const messages  = chatLogNew.map((message) => message.message).join("\n")
+    const messages = chatLogNew.map((message) => message.message).join("\n")
     const response = await fetch("http://localhost:3001/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      message: messages
-    })
-  }
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: messages
+      })
+    }
     );
     const data = await response.json();
-    await setChatLog([...chatLogNew, { user: "gpt",message: `${data.message}`}])
+    await setChatLog([...chatLogNew, { user: "gpt", message: `${data.message}` }])
   }
 
   return (
     <div className="App">
       <aside className="sidemenu">
-        <img 
+        <img
           src="https://i.imgur.com/6GngmwP.png"
           alt="logo"
           height="220"
@@ -53,12 +53,12 @@ function App() {
 
       </aside>
       <section className="chatbox">
-        <div className="chat-log">
-          {chatLog.map((message, index) => (
-            <ChatMessage key={index} message={message} />
-          ))}
-          <div className="chat-message chatgpt">
-            
+        <div className="chatbox-container">
+          <div className="chat-log">
+            {chatLog.map((message, index) => (
+              <ChatMessage key={index} message={message} />
+            ))}
+            <div className="chat-message chatgpt"></div>
           </div>
         </div>
         <div className="chat-input-holder">
