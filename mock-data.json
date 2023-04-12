@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-6zH6dbWljH9S0kULfCp7bq61EVR5j",
+    "object": "chat.completion",
+    "created": 1680061783,
+    "model": "gpt-3.5-turbo-0301",
+    "usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 15,
+        "total_tokens": 36
+    },
+    "choices": [
+        {
+            "message": {
+                "role": "assistant",
+                "content": "Sure, I can be your therapist. How can I help you today?"
+            },
+            "finish_reason": "stop",
+            "index": 0
+        }
+    ]
+}
