@@ -82,7 +82,8 @@ const ChatMessage = ({ message }) => {
     <div className={`chat-message ${message.user === "gpt" && "chatgpt"}`}>
       <div className="chat-message-center">
         <div className={`avatar ${message.user === "gpt" && "chatgpt"}`}>
-          Me:</div>
+          {message.user === "gpt" ? "AI:" : "Me:"}
+        </div>
         <div className="message">{message.message}</div>
       </div>
     </div>
