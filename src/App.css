@@ -11,6 +11,7 @@
   width: 240px;
   padding:10px;
   background-color: #15315c;
+  font-family: 'Archivo Black', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   
 }
 
@@ -28,11 +29,15 @@
   padding:12px;
   border:1px solid rgb(255, 255, 255);
   border-radius:5px;
-  text-align:left;
+  text-align:center;
   transition:ease 0.25s all;
+  font-size: large;
+  /* font-family: 'Montserrat', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 .help-button:hover{
   background-color:rgba(255, 255, 255, 0.1);
+  font-size:larger;
+  padding: 20px;
 }
 
 .section.chatbox{
@@ -52,7 +57,7 @@
   left:0;right:0;
 }
 .chat-input-textarea{
-  
+  transition:ease 0.25s all;
   width:75%;
   padding: 12px;
   font-size:1.25 em;
@@ -63,6 +68,9 @@
   outline:none;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
   margin-left: 250px;
+}
+.chat-input-textarea:hover{
+  font-size:larger;
 }
 
 .chat-log{

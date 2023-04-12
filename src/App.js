@@ -1,14 +1,9 @@
-
 import './App.css';
 import { useState } from 'react';
 
-
-
 function App() {
-
   const [input, setInput] = useState("");
   const [chatLog, setChatLog] = useState([{
-
     user: "gpt",
     message: "Welcome to ThAIrapy Chatbot, an AI-powered therapy chatbot. Please feel free to share anything on your mind, and I'll do my best to help you. Straying off topic or making a request unrelated to therapy is not permitted. You can ask me for resources available based on your location, financial status, and commitments. Let's get started!"
   }]);
@@ -28,11 +23,14 @@ function App() {
       body: JSON.stringify({
         message: messages
       })
-    }
-    );
+    });
     const data = await response.json();
     await setChatLog([...chatLogNew, { user: "gpt", message: `${data.message}` }])
   }
+
+  // function handleHelpClick() {
+  //   window.open("https://mannbellani0426.wixsite.com/gettinghelp");
+  // }
 
   return (
     <div className="App">
@@ -46,11 +44,9 @@ function App() {
         <h1>ThAIrapy</h1>
         <h3>Mental Healthcare</h3>
 
-
-        {/* <div className="help-button">
-          <span className="modsonline">【!】</span> HELP
+        {/* <div className="help-button" onClick={handleHelpClick}>
+          【!】HELP
         </div> */}
-
       </aside>
       <section className="chatbox">
         <div className="chatbox-container">
@@ -89,6 +85,5 @@ const ChatMessage = ({ message }) => {
     </div>
   );
 };
-
 
 export default App;
