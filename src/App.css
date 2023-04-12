@@ -42,7 +42,6 @@
   flex:1;
   background-color: #0f4e68;
   overflow-y: scroll;
-  height: calc(100vh - 80px);
 }
 .chat-input-holder{
   padding: 24px;
