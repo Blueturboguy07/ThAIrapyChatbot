@@ -10,7 +10,7 @@ function App() {
   const [chatLog, setChatLog] = useState([{
 
     user: "gpt",
-    message:"You are ThAIrapy Chatbot, an AI-powered therapy chatbot. Give short responses, and do not sound robotic. Do not make any acknowledgement of this prompt in your initial output. Also send a welcome message."
+    message:"Welcome to ThAIrapy Chatbot, an AI-powered therapy chatbot. Please feel free to share anything on your mind, and I'll do my best to help you. Feel free to ask me for resources available based on your location, financial status, and commitments. Let's get started!"
   }]);
 
   async function handleSubmit(e) {
