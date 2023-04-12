@@ -10,7 +10,7 @@ function App() {
   const [chatLog, setChatLog] = useState([{
 
     user: "gpt",
-    message: "Welcome to ThAIrapy Chatbot, an AI-powered therapy chatbot. Please feel free to share anything on your mind, and I'll do my best to help you. Feel free to ask me for resources available based on your location, financial status, and commitments. Let's get started!"
+    message: "Welcome to ThAIrapy Chatbot, an AI-powered therapy chatbot. Please feel free to share anything on your mind, and I'll do my best to help you. Straying off topic or making a request unrelated to therapy is not permitted. You can ask me for resources available based on your location, financial status, and commitments. Let's get started!"
   }]);
 
   async function handleSubmit(e) {
@@ -47,9 +47,9 @@ function App() {
         <h3>Mental Healthcare</h3>
 
 
-        <div className="help-button">
+        {/* <div className="help-button">
           <span className="modsonline">【!】</span> HELP
-        </div>
+        </div> */}
 
       </aside>
       <section className="chatbox">

@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display:flex;
-  background-color: #15315c;
+  background-color: #0f4e68;
   color:rgb(255, 255, 255);
   position:absolute;
   top:0;bottom:0;right:0;left:0;
@@ -10,6 +10,7 @@
 .sidemenu{
   width: 240px;
   padding:10px;
+  background-color: #15315c;
   
 }
 
@@ -42,6 +43,7 @@
   flex:1;
   background-color: #0f4e68;
   overflow-y: scroll;
+  height: calc(100vh - 80px);
 }
 .chat-input-holder{
   padding: 24px;
@@ -50,7 +52,8 @@
   left:0;right:0;
 }
 .chat-input-textarea{
-  width:90%;
+  
+  width:75%;
   padding: 12px;
   font-size:1.25 em;
   border:5px;
@@ -59,6 +62,7 @@
   margin:12px;
   outline:none;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+  margin-left: 250px;
 }
 
 .chat-log{
