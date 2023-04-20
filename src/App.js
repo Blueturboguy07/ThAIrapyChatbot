@@ -15,7 +15,7 @@ function App() {
     setChatLog(chatLogNew)
 
     const messages = chatLogNew.map((message) => message.message).join("\n")
-    const response = await fetch("http://localhost:3001/", {
+    const response = await fetch("https://thairapy-api.vercel.app/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
