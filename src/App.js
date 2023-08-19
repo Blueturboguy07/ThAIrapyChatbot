@@ -64,7 +64,7 @@ function App() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="chat-input-textarea"
-              placeholder="Type something..."
+              placeholder="Sorry, this chatbot no longer works..."
             />
           </form>
         </div>
